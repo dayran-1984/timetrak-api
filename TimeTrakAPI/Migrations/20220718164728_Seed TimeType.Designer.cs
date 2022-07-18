@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TimeTrakAPI.Context;
@@ -11,9 +12,10 @@ using TimeTrakAPI.Context;
 namespace TimeTrakAPI.Migrations
 {
     [DbContext(typeof(TimeTrakContext))]
-    partial class TimeTrakContextModelSnapshot : ModelSnapshot
+    [Migration("20220718164728_Seed TimeType")]
+    partial class SeedTimeType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
